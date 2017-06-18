@@ -1,0 +1,10 @@
+#tutor 7:-2
+a = [int(s) for s in input().split()] # first input
+l=["I" for i in range(a[0])] # list of "I" length == a[0]
+N=int(0) #number of strike
+while N<a[1]:   #strike:
+    N+=1
+    q=[int(v) for v in input().split()]
+    p=["." for i in range(q[1]-q[0])]
+    l[(q[0]-1):(q[1]-1)]=p
+print(l)
