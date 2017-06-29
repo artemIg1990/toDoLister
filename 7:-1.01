@@ -1,0 +1,31 @@
+#// 7:-1
+
+a1=[int(s) for s in input().split()]  # fig.1 position
+a2=[int(s) for s in input().split()]
+a3=[int(s) for s in input().split()]
+a4=[int(s) for s in input().split()]
+a5=[int(s) for s in input().split()]
+a6=[int(s) for s in input().split()]
+a7=[int(s) for s in input().split()]
+a8=[int(s) for s in input().split()]  # fig.8 positon
+c=int(0)  #cheker ==0 if NO
+#fig.1 moves 
+i=int(0)
+while a1[0]>0 and a1[1]>0 and a1[0]<9 and a1[1]<9 :
+   
+    for j in range(len(a1)):
+        a1[j]+=i
+    i+=1
+    if a1==a2 or a1==a3 or a1==a4 or a1==a5 or a1==a6 or a1==a7 or a1==a8:
+        c+=1
+    for j in range(len(a1)):
+        a1[j]+=i
+    i-=1
+    if a1==a2 or a1==a3 or a1==a4 or a1==a5 or a1==a6 or a1==a7 or a1==a8:
+        c+=1
+    for j in range(len(a1)):
+        a1[0]+=i
+        a1[1]-=i
+    i+=1
+if c==0: print("NO")
+else: print("YES")
